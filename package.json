@@ -5,6 +5,7 @@
     "timetable-reservation": "bin/cdk-sample.js"
   },
   "scripts": {
+    "dev": "cd src && bun run dev",
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
