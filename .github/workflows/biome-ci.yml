@@ -1,20 +1,24 @@
-name: format and lint by biome
+name: Biome
 
 on:
   push:
-  workflow_dispatch:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  ci:
+  biome:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: actions/checkout@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          version: 9.1.1
+          bun-version: latest
 
-      # pnpm iを実行
-      - run: pnpm i --frozen-lockfile
+      - name: Install dependencies
+        run: bun install
 
-      # biomeによるフォーマットとlintを実行
-      - run: pnpm check
+      - name: Run Biome
+        run: bun run biome
