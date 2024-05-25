@@ -5,7 +5,6 @@
     "timetable-reservation": "bin/cdk-sample.js"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
