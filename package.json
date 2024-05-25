@@ -1,0 +1,29 @@
+{
+  "name": "cdk-sample",
+  "version": "0.1.0",
+  "bin": {
+    "timetable-reservation": "bin/cdk-sample.js"
+  },
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "check": "pnpm dlx @biomejs/biome check ./lib ./lambda ./bin",
+    "fix": "pnpm dlx @biomejs/biome check --apply ./lib ./lambda ./bin"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3",
+    "@types/node": "20.12.7",
+    "aws-cdk": "2.142.1",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.139.1",
+    "aws-sdk": "^2.1622.0",
+    "constructs": "^10.0.0",
+    "dotenv": "^16.4.5",
+    "path": "^0.12.7"
+  }
+}
