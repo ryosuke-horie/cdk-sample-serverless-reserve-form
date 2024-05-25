@@ -6,7 +6,7 @@ import { FrontendS3WithCloudFrontStack } from "../lib/aws-cdk-resorce-cdk-sample
 
 // cdkによるアプリケーション定義
 const app = new cdk.App();
-const env = { region: "ap-northeast-1", account: "851725614224" };
+const env = { region: "ap-northeast-1", account: "*******" };
 
 // バックエンドLambda及びAPI Gatewayのデプロイ
 new TimetableReservationStack(app, "TimetableReservationStack", { env });
